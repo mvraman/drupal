@@ -11,8 +11,8 @@ pipeline {
       // mount a shared data container to speed up composer operations, and
       // the generated vagrant SSH key for deployments to the Drupal VM.
       args '''
---mount "type=volume,src=dot-composer,dst=/home/jenkins/.composer" \
---mount "type=bind,src=/vagrant/.vagrant/machines/drupal/virtualbox/private_key,dst=/home/jenkins/.ssh/id_rsa"'
+mount "type=volume,src=dot-composer,dst=/home/jenkins/.composer" \
+mount "type=bind,src=/vagrant/.vagrant/machines/drupal/virtualbox/private_key,dst=/home/jenkins/.ssh/id_rsa"'
 '''
     }
   }
